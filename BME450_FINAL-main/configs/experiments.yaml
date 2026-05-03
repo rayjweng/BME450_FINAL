@@ -1,0 +1,52 @@
+seed: 450
+device: auto
+num_workers: 0
+
+dataset:
+  train_manifest: data/processed/food_beverage_binary/train.csv
+  val_manifest: data/processed/food_beverage_binary/val.csv
+  test_manifest: data/processed/food_beverage_binary/test.csv
+  image_size: 160
+  class_names:
+    - beverage
+    - food
+
+training_defaults:
+  epochs: 4
+  weight_decay: 0.0001
+  freeze_backbone: true
+  label_smoothing: 0.0
+  early_stopping_patience: 2
+
+experiments:
+  - name: resnet18_adam_lr1e3_bs32_lightaug
+    architecture: resnet18
+    batch_size: 32
+    learning_rate: 0.001
+    optimizer: adam
+    augmentation: light
+  - name: resnet18_adamw_lr3e4_bs32_lightaug
+    architecture: resnet18
+    batch_size: 32
+    learning_rate: 0.0003
+    optimizer: adamw
+    augmentation: light
+  - name: resnet18_sgd_lr1e2_bs64_heavyaug
+    architecture: resnet18
+    batch_size: 64
+    learning_rate: 0.01
+    optimizer: sgd
+    augmentation: heavy
+  - name: mobilenet_v3_small_adam_lr1e3_bs32_lightaug
+    architecture: mobilenet_v3_small
+    batch_size: 32
+    learning_rate: 0.001
+    optimizer: adam
+    augmentation: light
+  - name: mobilenet_v3_small_adamw_lr3e4_bs64_heavyaug
+    architecture: mobilenet_v3_small
+    batch_size: 64
+    learning_rate: 0.0003
+    optimizer: adamw
+    augmentation: heavy
+

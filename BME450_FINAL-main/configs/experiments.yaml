@@ -6,7 +6,7 @@ dataset:
   train_manifest: data/processed/food_beverage_binary/train.csv
   val_manifest: data/processed/food_beverage_binary/val.csv
   test_manifest: data/processed/food_beverage_binary/test.csv
-  image_size: 160
+  image_size: 160 
   class_names:
     - beverage
     - food

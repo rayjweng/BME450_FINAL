@@ -1,6 +1,6 @@
 # Title
 
-"Grocery and Beverage Image Sorting for Food Pantry Applications."
+"Grocery and Beverage Image Sorting for Food Pantry Applications"
 
 ## Team members
 

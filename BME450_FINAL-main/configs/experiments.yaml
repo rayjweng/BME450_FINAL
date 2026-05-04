@@ -11,6 +11,7 @@ dataset:
     - beverage
     - food
 
+
 training_defaults:
   epochs: 4
   weight_decay: 0.0001

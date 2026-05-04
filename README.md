@@ -15,3 +15,4 @@ Our model will use a convolutional neural network to classify images of commonly
 Key challenges include distinguishing visually similar items, handling damaged packaging, and managing diverse product appearances. These will be addressed through dataset expansion, augmentation techniques, and model tuning.
 
 Overall, this project aims to reduce sorting time, lower operational costs, and improve food distribution efficiency within food pantries.
+
